@@ -1,0 +1,1 @@
+pyuic5.exe -x C:\Users\admin\source\repos\calculator_2\calculator_2.ui -o C:\Users\admin\source\repos\calculator_2\calcul_2.py
