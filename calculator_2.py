@@ -88,11 +88,12 @@ def nine():
 
 def zero():
     global first, number
-    number = False
-    x = "0"
-    first += x
-    form.textEdit.setText('%s' %first)
-    print(first)
+    if first[-1].isdigit() and len(first) != 0:
+        number = False
+        x = "0"
+        first += x
+        form.textEdit.setText('%s' %first)
+        print(first)
 
 def plus():
     global first, number
@@ -134,8 +135,21 @@ def delete():
     global first, number
     first = first[:-1]
     form.textEdit.setText('%s' %first)
-    number = False
+    if len(first)==0:
+        number = True
+    else:
+        number = False
     print(first)
+
+def equals():
+    global first, number
+    if not number:
+        result = eval(first)
+        form.textEdit_2.setText('%s' %result)
+        print(result)
+
+
+
 
 
    
@@ -160,5 +174,6 @@ form.pushButton_12.clicked.connect(minus)
 form.pushButton_14.clicked.connect(multiply)
 form.pushButton_13.clicked.connect(division)
 form.pushButton_15.clicked.connect(delete)
+form.pushButton_16.clicked.connect(equals)
 
 app.exec_()
