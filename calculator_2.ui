@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>280</width>
-    <height>314</height>
+    <width>256</width>
+    <height>289</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,12 +18,12 @@
     <item row="0" column="0" colspan="4">
      <widget class="QTextEdit" name="textEdit"/>
     </item>
-    <item row="1" column="0">
+    <item row="1" column="0" colspan="4">
      <widget class="QLabel" name="label">
       <property name="font">
        <font>
         <family>Monotype Corsiva</family>
-        <pointsize>20</pointsize>
+        <pointsize>18</pointsize>
         <italic>true</italic>
        </font>
       </property>
@@ -31,6 +31,9 @@
        <string>Результат:</string>
       </property>
      </widget>
+    </item>
+    <item row="2" column="0" colspan="4">
+     <widget class="QTextEdit" name="textEdit_2"/>
     </item>
     <item row="3" column="0">
      <widget class="QPushButton" name="pushButton">
@@ -256,8 +259,61 @@
       </property>
      </widget>
     </item>
-    <item row="2" column="0" colspan="4">
-     <widget class="QTextEdit" name="textEdit_2"/>
+    <item row="7" column="0">
+     <widget class="QPushButton" name="pushButton_17">
+      <property name="font">
+       <font>
+        <family>Monotype Corsiva</family>
+        <pointsize>20</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>,</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="1">
+     <widget class="QPushButton" name="pushButton_18">
+      <property name="font">
+       <font>
+        <family>Monotype Corsiva</family>
+        <pointsize>20</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>(</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="2">
+     <widget class="QPushButton" name="pushButton_19">
+      <property name="font">
+       <font>
+        <family>Monotype Corsiva</family>
+        <pointsize>20</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>)</string>
+      </property>
+     </widget>
+    </item>
+    <item row="7" column="3">
+     <widget class="QPushButton" name="pushButton_20">
+      <property name="font">
+       <font>
+        <family>Monotype Corsiva</family>
+        <pointsize>24</pointsize>
+        <italic>true</italic>
+       </font>
+      </property>
+      <property name="text">
+       <string>^</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -266,7 +322,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>280</width>
+     <width>256</width>
      <height>18</height>
     </rect>
    </property>

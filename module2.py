@@ -24,17 +24,17 @@ def second():
 
 def multy():
      global f_n, s_n, example , n_n
-     n_n = f_n * s_n
+     n_n = f_n / s_n
      n_n = str(n_n)
-     change = example.find('*')
+     change = example.find('/')
      example = example[:change] + n_n + example[change + 1:]
      print(example)
 
 
 id = 0
-example = '66/11-10*12/3-125*9/2-50*7+45/9'
+example = '66/11-120.0/3-1125.0/2-350.0+45/9'
 while(True):
-    id = example.find('*')
+    id = example.find('/')
     if(id == -1):
         break
     f_n = ''
@@ -44,4 +44,5 @@ while(True):
     first()
     second()
     multy()
+
 

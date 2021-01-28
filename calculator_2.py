@@ -141,6 +141,46 @@ def delete():
         number = False
     print(first)
 
+def comma():
+     global first, number
+     if not number:
+        x = "."
+        first += x
+        form.textEdit.setText('%s' %first)
+        number = True
+     print(first)
+
+def right_bracket():
+    global first, number
+    if not number:
+        x = "("
+        first += x
+        form.textEdit.setText('%s' %first)
+        number = True
+    print(first)
+
+def left_bracket():
+    global first, number
+    if not number:
+        x = ")"
+        first += x
+        form.textEdit.setText('%s' %first)
+        number = True
+    print(first)
+
+def rate():
+     global first, number
+     if not number:
+        x = "**"
+        first += x
+        form.textEdit.setText('%s' %first)
+        number = True
+     print(first)
+
+
+
+
+
 def equals():
     global first, number
     if not number:
@@ -175,5 +215,9 @@ form.pushButton_14.clicked.connect(multiply)
 form.pushButton_13.clicked.connect(division)
 form.pushButton_15.clicked.connect(delete)
 form.pushButton_16.clicked.connect(equals)
+form.pushButton_17.clicked.connect(comma)
+form.pushButton_18.clicked.connect(right_bracket)
+form.pushButton_19.clicked.connect(left_bracket)
+form.pushButton_20.clicked.connect(rate)
 
 app.exec_()
