@@ -1,32 +1,7 @@
 
-
-f_n = ''
-s_n = ''
-id = 0
-example = '10+12/3-46.5+9/2-50*7'
-id = example.find('*')
-right = id + 1
-left = id - 1
-
-
-#def is_multy():
-    #global f_n, s_n, id, example, right, left, n_n
-    #while "*" in example:
-        #id = example.find('*')
-        #right = id + 1
-        #left = id - 1
-        #first()
-        #second()
-        #multy()
-    #return example
-
-
-
-
-
 def first():
     global f_n, s_n, id, example, right, left
-    while example[left].isdigit() or example[left] == '.':
+    while left > -1 and example[left].isdigit() or example[left] == '.':
         f_n += example[left]
         example = example[:left] + example[left + 1:]
         left -= 1
@@ -36,12 +11,13 @@ def first():
     print(f_n)
     print(example)
 
-
 def second():
     global f_n, s_n, id, example, right, left
-    while example[right].isdigit():
+    while example[right].isdigit() or example[right] == '.':
         s_n += example[right]
-        example = example[:right] + example[right + 1:]
+        example = example[:right] + example[right+1:]
+        if(right >= len(example)):
+            break
     s_n = float(s_n)
     print(s_n)
     print(example)
@@ -54,6 +30,28 @@ def multy():
      example = example[:change] + n_n + example[change + 1:]
      print(example)
 
-first()
-second()
-multy()
+
+id = 0
+example = '10*12/3-125*9/2-50*7'
+while(True):
+    id = example.find('*')
+    if(id == -1):
+        break
+    f_n = ''
+    s_n = ''
+    right = id + 1
+    left = id - 1
+    first()
+    second()
+    multy()
+
+#def is_multy():
+    #global f_n, s_n, id, example, right, left, n_n
+    #while "*" in example:
+        #id = example.find('*')
+        #right = id + 1
+        #left = id - 1
+        #first()
+        #second()
+        #multy()
+    #return example
