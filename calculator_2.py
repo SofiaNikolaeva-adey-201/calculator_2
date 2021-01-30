@@ -147,10 +147,6 @@ def rate():
      form.textEdit.setText('%s' %first)
      print(first)
 
-
-
-
-
 def equals():
     global first
     try:
@@ -170,16 +166,8 @@ def equals():
         
 
 
-
-
-
-
-   
-
-
-
 first = " "
-number = True
+
 
 form.pushButton.clicked.connect(one)
 form.pushButton_2.clicked.connect(two)
