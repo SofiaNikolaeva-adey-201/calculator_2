@@ -14,8 +14,7 @@ window.show()
 
 
 def one():
-    global first, number
-    number = False
+    global first
     x = "1"
     first += x
     form.textEdit.setText('%s' %first)
@@ -23,158 +22,129 @@ def one():
     
 
 def two():
-    global first, number
-    number = False
+    global first
     x = "2"
     first += x
     form.textEdit.setText('%s' %first)
     print(first)
 
 def three():
-    global first, number
-    number = False
+    global first
     x = "3"
     first += x
     form.textEdit.setText('%s' %first)
     print(first)
 
 def four():
-    global first, number
-    number = False
+    global first
     x = "4"
     first += x
     form.textEdit.setText('%s' %first)
     print(first)
 
 def five():
-    global first, number
-    number = False
+    global first
     x = "5"
     first += x
     form.textEdit.setText('%s' %first)
     print(first)
 
 def six():
-    global first, number
-    number = False
+    global first
     x = "6"
     first += x
     form.textEdit.setText('%s' %first)
     print(first)
 
 def seven():
-    global first, number
-    number = False
+    global first
     x = "7"
     first += x
     form.textEdit.setText('%s' %first)
     print(first)
 
 def eight():
-    global first, number
-    number = False
+    global first
     x = "8"
     first += x
     form.textEdit.setText('%s' %first)
     print(first)
 
 def nine():
-    global first, number
-    number = False
+    global first
     x = "9"
     first += x
     form.textEdit.setText('%s' %first)
     print(first)
 
 def zero():
-    global first, number
-    if first[-1].isdigit() and len(first) != 0:
-        number = False
-        x = "0"
-        first += x
-        form.textEdit.setText('%s' %first)
-        print(first)
+    global first
+    x = "0"
+    first += x
+    form.textEdit.setText('%s' %first)
+    print(first)
 
 def plus():
-    global first, number
-    if not number:
-        x = "+"
-        first += x
-        form.textEdit.setText('%s' %first)
-        number = True
+    global first
+    x = "+"
+    first += x
+    form.textEdit.setText('%s' %first)
     print(first)
 
 def minus():
-    global first, number
-    if not number:
-        x = "-"
-        first += x
-        form.textEdit.setText('%s' %first)
-        number = True
+    global first
+    x = "-"
+    first += x
+    form.textEdit.setText('%s' %first)
     print(first)
 
 def multiply():
-    global first, number
-    if not number:
-        x = "*"
-        first += x
-        form.textEdit.setText('%s' %first)
-        number = True
+    global first
+    x = "*"
+    first += x
+    form.textEdit.setText('%s' %first)
+    number = True
     print(first)
 
 def division():
-    global first, number
-    if not number:
-        x = "/"
-        first += x
-        form.textEdit.setText('%s' %first)
-        number = True
+    global first
+    x = "/"
+    first += x
+    form.textEdit.setText('%s' %first)
     print(first)
 
 def delete():
-    global first, number
+    global first
     first = first[:-1]
     form.textEdit.setText('%s' %first)
-    if len(first)==0:
-        number = True
-    else:
-        number = False
     print(first)
 
 def comma():
-     global first, number
-     if not number:
-        x = "."
-        first += x
-        form.textEdit.setText('%s' %first)
-        number = True
+     global first
+     x = "."
+     first += x
+     form.textEdit.setText('%s' %first)
      print(first)
 
 def right_bracket():
-    global first, number
-    if not number:
-        x = "("
-        first += x
-        form.textEdit.setText('%s' %first)
-        number = True
+    global first
+    x = "("
+    first += x
+    form.textEdit.setText('%s' %first)
     print(first)
 
 def left_bracket():
-    global first, number
-    if not number:
-        x = ")"
-        first += x
-        form.textEdit.setText('%s' %first)
-        number = True
+    global first
+    x = ")"
+    first += x
+    form.textEdit.setText('%s' %first)
     print(first)
 
 def rate():
-     global first, number
-     if not number:
-        x = "**"
-        first += x
-        form.textEdit.setText('%s' %first)
-        number = True
+     global first
+     x = "**"
+     first += x
+     form.textEdit.setText('%s' %first)
      print(first)
 
 
@@ -182,11 +152,23 @@ def rate():
 
 
 def equals():
-    global first, number
-    if not number:
+    global first
+    try:
         result = eval(first)
         form.textEdit_2.setText('%s' %result)
         print(result)
+    except IndentationError:
+        form.textEdit_2.setText('Проверьте корректность введенного выражения')
+    except ZeroDivisionError:
+        form.textEdit_2.setText('На ноль делить нельзя')
+    except ArithmeticError:
+        form.textEdit_2.setText('Проверьте корректность введенного выражения')
+    except SyntaxError:
+        form.textEdit_2.setText('Проверьте корректность введенного выражения')
+
+
+        
+
 
 
 
